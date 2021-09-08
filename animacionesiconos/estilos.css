@@ -16,12 +16,6 @@ i{
     animation-duration: 10s;
     animation-iteration-count: infinite
 }
-#bici{
-    position: absolute;
-    animation-name: otra;
-    animation-duration: 10s;
-    animation-iteration-count: infinite
-}
 
 @keyframes fadein {
     from{opacity: 0;}
