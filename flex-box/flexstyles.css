@@ -1,0 +1,39 @@
+#justify,#otra{
+    display: flex;
+    /* justify-content: center - para posicionar en el centro */
+    /* justify-content: flex-end - para posicionar a la derecha */
+    /* justify-content: flex-start - viene por defecto */
+    justify-content: space-around;
+    justify-content: space-between;
+    justify-content: space-evenly;
+}
+.primer{
+    /* width: 150px;  */
+    /* height: 150px; */
+    background-color: rgb(152, 185, 73);
+    float: left;
+    margin-left: 2px;
+
+}
+.primer:after{
+    content: "esto no se puede copiar";
+    color: rgb(155, 119, 72);
+    font-size: 20px;
+}
+.primer::before{
+    content: "esto va antes del contenido";
+    color: yellow;
+}
+.primer.azul{
+    background-color: blue;
+}
+li{
+    display: inline;
+}
+span{
+    display: block;
+}
+.principal{
+    display: flex;
+    flex-wrap: wrap;
+}

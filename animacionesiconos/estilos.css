@@ -1,0 +1,65 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+i{
+    color: blueviolet;
+}
+
+@keyframes mover{
+    from{top: 100px;}
+    to{top: 220px}
+}
+
+#sofa{
+    position: absolute;
+    animation-name: mover, otra;
+    animation-duration: 10s;
+    animation-iteration-count: infinite
+}
+#bici{
+    position: absolute;
+    animation-name: otra;
+    animation-duration: 10s;
+    animation-iteration-count: infinite
+}
+
+@keyframes fadein {
+    from{opacity: 0;}
+    to{opacity: 1;}
+    
+}
+#astronauta{
+    animation-name: fadein;
+    animation-duration: 10s;
+}
+@keyframes otra {
+    0%{color: black;}
+    25%{color: bisque;}
+    50%{color: yellow;}
+    75%{color: orange;}
+    100%{color: red;}
+}
+
+ul li{
+    display: inline;
+    padding: 10px;
+    background-color: coral;
+    color: black;
+    cursor: pointer;
+}
+ul li:hover{
+    animation-name: menu;
+    animation-duration: 10s
+}
+@keyframes menu {
+    0%{
+        padding: 10px;
+        background-color: aquamarine;
+        color: black;
+    }
+    100%{
+        padding: 20px;
+        background-color: blue;
+        color: beige;
+    }
+}
