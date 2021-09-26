@@ -11,17 +11,19 @@
 <body>
 
     <!--inicio de nav-->
-    <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-              <img src="./imagenes_integrador_front/codoacodo.png" alt="">
-              Conf Bs As
-          </a>
-          <div class="collapse navbar-collapse">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <a class="navbar-brand" href="#">
+                <img src="./imagenes_integrador_front/codoacodo.png" alt="">
+                Conf Bs As
+            </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">La conferencia</a>
+                <a class="nav-link" href="#">La conferencia</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Los oradores</a>
@@ -32,16 +34,31 @@
               <li class="nav-item">
                 <a class="nav-link" href="#">Conviértete en orador</a>
               </li>
-              <li>
-                  <button class="btn btn-outline-success" type="submit">Comprar tickets</button>
-                </li>
+              <li class="nav-item dropdown">
+              </li>
             </ul>
+            <form class="d-flex">
+              <button class="btn btn-outline-success" type="submit">Comprar tickets</button>
+            </form>
           </div>
         </div>
       </nav>
-    </div>
       <!--fin de nav-->
-      
+      <!--header-->
+      <div class="row d-flex">
+        <img id="fondo" src="./imagenes_integrador_front/ba1.jpg" height="1200px" alt="">
+        <div class="col-3 order-5 position-absolute text-end text-light">
+            <h1>Conf Bs As</h1>
+            <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione modi, repudiandae aut deserunt, animi pariatur accusamus, cupiditate quis exercitationem voluptatum facilis numquam illo delectus aspernatur perspiciatis? Atque sit labore praesentium?
+            </p>
+            <button type="button" class="btn btn-outline-secondary">Secondary</button>
+            <button type="button" class="btn btn-success">Success</button>
+        </div>
+    </div>
+      </div>
+          
+    </div>  
 
 </body>
 </html>
