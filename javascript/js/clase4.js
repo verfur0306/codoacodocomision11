@@ -24,8 +24,8 @@ window.addEventListener('load',function(){
       //let usuarios = ['luis'.'fede']
 
       let usuario = {
-          email: 'verito@gmail.com',
-          pass: '1234',
+          email:'verito@gmail.com',
+          pass:'1234',
           validar:(e,p)=>{
               if( e === usuario.email && p === usuario.pass){
                   return true;
@@ -35,15 +35,14 @@ window.addEventListener('load',function(){
           }
       }
 
-     function Entrar(ev){
-        let email = document.getElementById("exampleInputEmail1").value;
+     //function Entrar(ev){
+      //  let email = document.getElementById("exampleInputEmail1").value;
         let pass = document.getElementById("exampleInputPassword1").value;
-     }
 
      let entra = usuario.validar(email,pass);
     if(entra){
         elemento.innerHTML=`
-        <h1> bienvenido/a ${email} </h1>
+        <h1> bienvenido/a </h1>
         `;
 
     }

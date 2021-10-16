@@ -10,23 +10,11 @@ nav img{
 }
 #fondo{
     filter:brightness(40%);
-    object-fit: none; /* Do not scale the image */
-    object-position: center; /* Center the image within the element */
     width: 100%;
-    max-height: 750px;
-    margin-bottom: 1rem;
-}
-.micontainer{
-    position: absolute;
-    margin-top: 20%;
-    margin-left: 60%;
-}
+    max-height: 750px;}
+
 .card{
     margin: 5%;
-}
-
-.badge2{
-    color: rgb(22, 155, 155);
 }
 
 h2{
@@ -39,4 +27,17 @@ h3{
     font-family: 'Catamaran', sans-serif;
     font-size: 1.5rem;
     font-weight: 400;
+}
+
+#exampleFormControlTextarea1{
+    font-size: 1.5em;
+    font-weight: 4 00;
+    color: rgb(109, 109, 109) ;
+}
+
+#conferencia{
+    position: absolute;
+    display: flex;
+    margin-left: 34%;
+    margin-top: 15%;
 }
