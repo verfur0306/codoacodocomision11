@@ -15,18 +15,18 @@ const comprarTicket=()=>
                     </div>
                     </div>
                     <div class="card"> 
-                    <div class="card-body border border-primary mr-1">
+                    <div class="card-body border border-info mr-1">
                     <h5 class="card-title text-center">Trainee</h5>
                     <p class="card-text text-center">Tienen un descuento</p>
-                    <p class="card-title text-center font-weight-bold">80%</p>
+                    <p class="card-title text-center font-weight-bold">50%</p>
                     <p class="card-text text-center"><small class="text-muted">*presentar documentación</small></p>
                     </div>
                     </div>
                     <div class="card"> 
-                    <div class="card-body border border-primary mr-1">
-                    <h5 class="card-title text-center">Estudiantes</h5>
+                    <div class="card-body border border-warning mr-1">
+                    <h5 class="card-title text-center">Junior</h5>
                     <p class="card-text text-center">Tienen un descuento</p>
-                    <p class="card-title text-center font-weight-bold">80%</p>
+                    <p class="card-title text-center font-weight-bold">15%</p>
                     <p class="card-text text-center"><small class="text-muted">*presentar documentación</small></p>
                     </div>
                     </div>
