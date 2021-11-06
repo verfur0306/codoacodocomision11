@@ -80,7 +80,7 @@ const comprarTicket=()=>
                     </div>
                 </div>
                 <div class="form-row d-flex mt-2">
-                    <button class="btn btn-primary col-6 m-1" style="background-color: #4ab545" id="borrar" <a href="#"> Borrar </a></button>
+                    <button class="btn btn-primary col-6 m-1" style="background-color: #4ab545" id="borrar" onClick="reload"> Borrar</button>
                     <button class="btn btn-primary col-6 m-1" style="background-color: #4ab545" id="resumen" onclick="guardarDatos()"> Resumen </button>
                     </div>
                 </form>
@@ -89,7 +89,6 @@ const comprarTicket=()=>
         </div>
         `
         ;
-    document.getElementById("resumen").addEventListener("click",guardarDatos());
         
 const mostrarTotal=()=>{ 
     var opcion = document.getElementById("inputSelect").value; 
@@ -114,47 +113,8 @@ const mostrarTotal=()=>{
         console.log(`Te corresponde pagar \$${total}`)
       }
 
-      
-
     }
 
     comprarTicket()
 
     
-
-   /* elemento.innerHTML= `
-    
-    <select class="form-select form-select-sm col-3" aria-label=".form-select-sm example">
-    <option selected>Selecciona tu opción</option>
-    <option value="1">Estudiante</option>
-    <option value="2">Trainee</option>
-    <option value="3">Junior</option>
-    <option value="4">Sin descuento</option>
-  </select>`
-
-
-
-
-
-   /* let ticket = 200
-    let op = prompt("Escribí tu condición Estudiante, Trainee o Junior")
-
-switch(op){
-    case "1":
-    let resultado = Number((ticket * 0,2))    
-    elemento.innerHTML="<p> total a pagar $ " resultado "</p>";
-        break
-    case "2":
-        let resultado = (ticket * 0,5)     
-        elemento.innerHTML="<p> total a pagar $ " resultado "</p>";
-        break
-    case "3":
-        let resultado = (ticket * 0,85)     
-        elemento.innerHTML="<p> total a pagar $ " resultado "</p>";
-        break
-    default:
-        let resultado = (ticket * 1)     
-        elemento.innerHTML="<p> total a pagar $ " resultado "</p>";
-    }
-}; */
-
