@@ -34,3 +34,18 @@ var opcion= prompt('Elige tu opcion E=estudiante T=trainee J=junior')
                   //          </div>
 
 //`}
+
+
+
+if (opcion==='estudiante'){
+  let precio=(200*0.2)
+  console.log('Te corresponde pagar $' +precio)
+
+}else if (opcion==='trainee'){
+  let precio=(200*0.50)
+  console.log('Te corresponde pagar $' +precio)
+
+}else if(opcion==='junior'){
+  let precio=(200*0.85)
+  console.log('Te corresponde pagar $' +precio)
+}

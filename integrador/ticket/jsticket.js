@@ -1,5 +1,9 @@
 let container = document.getElementById("seccion");
 
+const guardarDatos=()=>{
+    let datos = document.querySelectorAll("input").value
+    console.log(datos[0].value)}
+
 const comprarTicket=()=>
     container.innerHTML=`
         <div class= "container">
@@ -62,7 +66,7 @@ const comprarTicket=()=>
                             </div>
                             <div class="form-group col-6 col-md-6 m-1"> 
                                 <label for="">Categoría</label>
-                                <select class="form-select" id="inputSelect"> 
+                                <select class="form-select" id="inputSelect" onchange="mostrarTotal()";> 
                                     <option value="estudiante">Estudiante</option>
                                     <option value="trainee">Trainee</option>
                                     <option value="junior">Junior</option>
@@ -76,17 +80,47 @@ const comprarTicket=()=>
                     </div>
                 </div>
                 <div class="form-row d-flex mt-2">
-                    <button class="btn btn-primary col-6 m-1"> Borrar </button>
-                    <button class="btn btn-primary col-6 m-1"> Resumen </button>
+                    <button class="btn btn-primary col-6 m-1" style="background-color: #4ab545" id="borrar" <a href="#"> Borrar </a></button>
+                    <button class="btn btn-primary col-6 m-1" style="background-color: #4ab545" id="resumen" onclick="guardarDatos()"> Resumen </button>
                     </div>
                 </form>
             </div>
             </div>
         </div>
         `
+        ;
+    document.getElementById("resumen").addEventListener("click",guardarDatos());
+        
+const mostrarTotal=()=>{ 
+    var opcion = document.getElementById("inputSelect").value; 
+    console.log(opcion); 
+    
+    if (opcion==='estudiante'){
+        let precio=(200*0.2)
+        let cantidad=document.getElementById("cantidadEntradas").value
+        let total=precio*cantidad
+        console.log(`Te corresponde pagar \$${total}`)
+        
+      }else if (opcion==='trainee'){
+        let precio=(200*0.50)
+        let cantidad=document.getElementById("cantidadEntradas").value
+        let total=precio*cantidad
+        console.log(`Te corresponde pagar \$${total}`)
+      
+      }else if(opcion==='junior'){
+        let precio=(200*0.85)
+        let cantidad=document.getElementById("cantidadEntradas").value
+        let total=precio*cantidad
+        console.log(`Te corresponde pagar \$${total}`)
+      }
 
+      
 
+    }
 
+    comprarTicket()
+
+    
 
    /* elemento.innerHTML= `
     
