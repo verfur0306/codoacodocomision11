@@ -16,7 +16,7 @@ public class Conexion {
          }
          return conexion;
     }
-    public static void main (String regulo[]) throws SQLException{
+   /* public static void main (String regulo[]) throws SQLException{
         Connection c = null;
         Conexion con = new Conexion();
         c = con.getConection();
@@ -29,7 +29,9 @@ public class Conexion {
             int id = rs.getInt("id");
             String nombre = rs.getString("nombre");
             String apellido = rs.getString("apellido");
-            System.out.println("Id: " +  id + "Nombre: " + nombre);
+            String email = rs.getString("email");
+             String telefono = rs.getString("telefono");
+            System.out.println("Id: " +  id + " Nombre: " + nombre + " Apellido: "+ apellido);
         }
-    }
+    }*/
 }
