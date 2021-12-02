@@ -19,6 +19,10 @@
                 <form class="p-5 w-50" action="AlumnosController?accion=insert" method="POST">
                     
                     <div class="mb-3"> 
+                        <label for="id" class="form-label"></label>
+                        <input type="hidden" class="form-control" id="id" name="id" value=""/> 
+                    </div>
+                    <div class="mb-3"> 
                         <label for="nombre" class="form-label">Nombre</label>
                         <input type="text" class="form-control" id="nombre" name="nombre" value=""/> 
                     </div>
