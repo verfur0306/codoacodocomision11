@@ -42,7 +42,7 @@ public class AlumnosDAO {
         Alumnos alumno = null;
         
        try{
-            ps = conexion.prepareStatement("SELECT id, nombre, apellido, email, telefono FROM participantes Where id = ?");
+            ps = conexion.prepareStatement("SELECT id, nombre, apellido, email, telefono FROM participantes WHERE id = ?");
             ps.setInt(1,_id);
             rs = ps.executeQuery();
             
@@ -108,8 +108,26 @@ public class AlumnosDAO {
             return false;
         }
     }
-    
-    
+
+    public boolean ingresarUsuario(String usuario, String clave) {
+        PreparedStatement ps;
+        ResultSet rs;
+      
+        try{
+            ps = conexion.prepareStatement("SELECT email,password FROM usuarios WHERE email=?");
+            ps.setString(1, usuario);
+            rs = ps.executeQuery();
+            
+            while(rs.next()){
+                return usuario.equals(rs.getString("email"))&& clave.equals(rs.getString("password"));
+            }return false;
+        }catch(SQLException e){
+            System.out.println(e.toString());
+            return false;
+        }
+        
+    }
+  
     
 }
 

@@ -2,13 +2,13 @@
 package controlador;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 import modelo.Alumnos;
 import modelo.AlumnosDAO;
 
@@ -34,7 +34,6 @@ public class AlumnosController extends HttpServlet {
                 String telefono = request.getParameter("telefono");
                  int id = Integer.parseInt(request.getParameter("id")); 
 
-
                 Alumnos alumno = new Alumnos(id,nombre,apellido,email,telefono); 
                 alum.actualizarAlumno(alumno);
                 dispatcher = request.getRequestDispatcher("Vistas/alumnos.jsp");
@@ -54,8 +53,16 @@ public class AlumnosController extends HttpServlet {
                 
                 Alumnos alumno = new Alumnos(0, nombre,apellido, email, telefono);
                 alum.insertarAlumno(alumno);
-                dispatcher = request.getRequestDispatcher("Vistas/alumno.jsp");
-
+                dispatcher = request.getRequestDispatcher("Vistas/alumnos.jsp");
+            }else if (accion.equals("ingresar")){
+            String usuario = request.getParameter("email");
+            String clave = request.getParameter("pass");
+            boolean ingresa = alum.ingresarUsuario(usuario,clave);
+            if(ingresa){
+                dispatcher = request.getRequestDispatcher("Vistas/alumnos.jsp");
+            } else {
+                dispatcher = request.getRequestDispatcher("index.jsp");
+            }
                 
             }
             dispatcher.forward(request,response);
